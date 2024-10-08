@@ -128,8 +128,8 @@ header {
 
 .navbar ul {
   list-style: none;
-  display: flex; /* Horizontal layout */
-  justify-content: flex-start; /* Aligns to the left */
+  display: flex; /* Ensure items are aligned horizontally */
+  justify-content: center; /* Center items */
   padding: 0;
   margin: 0;
 }
