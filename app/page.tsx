@@ -33,7 +33,9 @@ export default function App() {
 
   return (
     <main>
-      <h1>My things to do</h1>
+      <h1 className="right-heading">Grace Assembly of God</h1>
+      <h2 className="right-heading">Spring City, PA</h2>
+      <h2>My things to do</h2>
       <button onClick={createTodo}>+ new</button>
       <ul>
         {todos.map((todo) => (
