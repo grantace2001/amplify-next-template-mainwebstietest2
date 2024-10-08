@@ -33,8 +33,6 @@ export default function App() {
 
   return (
     <main>
-      <h1 class="right-heading">Grace Assembly of God</h1>
-      <h2 class="right-heading">Spring City, PA</h2>
       <h1>My things to do</h1>
       <button onClick={createTodo}>+ new</button>
       <ul>
