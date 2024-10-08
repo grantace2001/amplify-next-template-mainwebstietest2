@@ -102,3 +102,83 @@ header {
 .navbar ul li a:hover {
   background-color: #575757;
 }
+/* Global styles */
+body {
+  margin: 0;
+  padding: 0;
+  font-family: Arial, sans-serif;
+}
+
+/* Container for logo and navbar */
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px;
+  background-color: #f8f8f8;
+  border-bottom: 1px solid #ddd;
+}
+
+/* Navbar styling */
+.navbar {
+  background-color: #333;
+  padding: 10px 0;
+  width: 100%;
+}
+
+.navbar ul {
+  list-style: none;
+  display: flex; /* Horizontal layout */
+  justify-content: flex-start; /* Aligns to the left */
+  padding: 0;
+  margin: 0;
+}
+
+.navbar ul li {
+  margin: 0 20px; /* Space between items */
+}
+
+.navbar ul li a {
+  color: white;
+  text-decoration: none;
+  font-size: 18px;
+}
+
+.navbar ul li a:hover {
+  background-color: #575757;
+}
+
+/* Ensure the main layout is full width */
+main {
+  width: 100%; /* Full width */
+  max-width: 1200px; /* Adjust this for maximum content width */
+  margin: 0 auto; /* Center the content */
+  padding: 20px;
+}
+
+/* Right-aligned heading (adjusted for new layout) */
+.right-heading {
+  position: absolute;
+  right: 20px;
+  top: 80px; /* Adjusted for navbar height */
+  font-size: 24px;
+  color: #333;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .navbar ul {
+    flex-direction: column; /* Stack items vertically on small screens */
+    align-items: center; /* Center align items */
+  }
+
+  .navbar ul li {
+    margin: 10px 0; /* Adjust spacing for vertical items */
+  }
+
+  .right-heading {
+    position: relative; /* Change positioning for smaller screens */
+    top: 10px; /* Adjust top position */
+    right: 0; /* Reset right position */
+  }
+}
