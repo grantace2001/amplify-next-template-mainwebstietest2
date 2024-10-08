@@ -76,15 +76,15 @@ header {
 /* Navbar styling */
 .navbar {
   background-color: #333;
-  padding: 10px 0; /* Reduce height */
-  position: relative; /* No fixed positioning */
+  padding: 10px 0;
+  position: relative;
   width: 100%;
 }
 
 .navbar ul {
   list-style: none;
   display: flex; /* Horizontal layout */
-  justify-content: center; /* Center-align menu items */
+  justify-content: flex-start; /* Aligns to the left */
   padding: 0;
   margin: 0;
 }
@@ -101,13 +101,4 @@ header {
 
 .navbar ul li a:hover {
   background-color: #575757;
-}
-
-/* Right-aligned heading (adjusted for new layout) */
-.right-heading {
-  position: absolute;
-  right: 20px;
-  top: 120px; /* Space for logo */
-  font-size: 24px;
-  color: #333;
 }
