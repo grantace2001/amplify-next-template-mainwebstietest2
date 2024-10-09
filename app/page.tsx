@@ -8,7 +8,6 @@ import { Amplify } from "aws-amplify";
 import outputs from "@/amplify_outputs.json";
 import "@aws-amplify/ui-react/styles.css";
 import "./../app/app.css";
-import './App.css'; // Adjust this path if your CSS file is in a different folder
 
 Amplify.configure(outputs);
 
@@ -27,11 +26,9 @@ export default function App() {
     </nav>
 
     {/* Header */}
-    <div className="container">
     <h1 className="right-heading">Grace Assembly of God</h1>
     <h2 className="right-heading">Spring City, PA</h2>
     {/* Add any other content for the landing page here */}
-    </div>
   </main>
 );
 }
