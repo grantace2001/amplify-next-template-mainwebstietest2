@@ -16,6 +16,7 @@ const client = generateClient<Schema>();
 export default function App() {
   return (
     <main style={{ paddingTop: '60px' }}>
+      <h1>Grace Assembly of God</h1>
       {/* Navigation Bar */}
       <nav className="navbar">
         <a href="#Home">Home</a>
@@ -29,8 +30,7 @@ export default function App() {
         <a href="#Give">Give</a>
       </nav>
       {/* Header */}
-      <h1>Grace Assembly of God</h1>
-      <h2>Spring City, PA</h2>
+      {/*will put a video or something here*/}
 
       {/* Add any other content for the landing page here */}
       {/* Centered Text */}
