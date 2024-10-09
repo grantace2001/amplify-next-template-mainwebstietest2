@@ -15,20 +15,18 @@ const client = generateClient<Schema>();
 
 export default function App() {
   return (
-    <main>
-    {/* Navigation Bar */}
-    { padding-top: 60px; /* Adjust this value based on your navbar height */}
-    <nav className="navbar">
+    <main style={{ paddingTop: '60px' }}>
+      {/* Navigation Bar */}
+      <nav className="navbar">
         <a href="#home">Home</a>
         <a href="#about">About</a>
         <a href="#services">Services</a>
         <a href="#contact">Contact</a>
-    </nav>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0"> a </meta>
-    {/* Header */}
-    <h1> Grace Assembly of God</h1>
-    <h2> Spring City, PA</h2>
-    {/* Add any other content for the landing page here */}
-  </main>
-);
+      </nav>
+      {/* Header */}
+      <h1>Grace Assembly of God</h1>
+      <h2>Spring City, PA</h2>
+      {/* Add any other content for the landing page here */}
+    </main>
+  );
 }
