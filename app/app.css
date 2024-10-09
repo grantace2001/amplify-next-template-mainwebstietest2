@@ -182,3 +182,24 @@ main {
     right: 0; /* Reset right position */
   }
 }
+.navbar {
+  display: flex;
+  justify-content: space-around; /* or space-between if preferred */
+  position: fixed;
+  top: 0;
+  width: 100%;
+  background-color: #f8f8f8; /* Customize as needed */
+  padding: 10px;
+  box-shadow: 0 4px 2px -2px gray; /* Optional: adds a shadow for depth */
+}
+
+.navbar a {
+  text-decoration: none;
+  padding: 10px;
+  color: #333; /* Adjust colors */
+  font-weight: bold;
+}
+
+.navbar a:hover {
+  color: #007BFF; /* Hover effect */
+}
