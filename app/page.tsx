@@ -18,6 +18,7 @@ export default function App() {
   return (
     <main>
     {/* Navigation Bar */}
+    { padding-top: 60px; /* Adjust this value based on your navbar height */}
     <nav className="navbar">
         <a href="#home">Home</a>
         <a href="#about">About</a>

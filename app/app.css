@@ -210,9 +210,12 @@ main {
   margin: 0 auto;
   padding: 20px;
   width: 100%;
-  max-width: 1200px; /* Optional */
+  max-width: 1200px; /* Optional: limits the width */
   text-align: left;
   display: flex;
   flex-direction: column;
   gap: 20px; /* Space between elements */
+}
+.container {
+  background-color: rgba(255, 0, 0, 0.1); /* Light red for visibility */
 }
