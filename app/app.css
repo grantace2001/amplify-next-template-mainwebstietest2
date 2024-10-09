@@ -18,54 +18,43 @@ main {
   margin: 60px auto 0; /* Center content and add top margin for fixed navbar */
   padding: 20px;
 }
+/* Style for the logo-banner above the navbar */
 .logo-banner {
   text-align: center;
-  padding: 10px;
-  background-color: #f8f8f8; /* Optional */
-  border-bottom: 1px solid #ddd; /* Optional border */
-  font-size: 24px; /* Adjust as needed */
+  padding: 20px;
+  background-color: #f8f8f8;
+  border-bottom: 1px solid #ddd;
+  font-size: 24px;
 }
+
+/* Navbar styling */
 .navbar {
   display: flex;
   justify-content: space-around;
-  position: fixed;
-  top: 0;
-  left: 0;
-  right: 0;
-  background-color: #f8f8f8;
+  background-color: #333;
   padding: 10px;
-  box-shadow: 0 4px 2px -2px gray;
-  z-index: 1000;  /* Ensure it's above other content */
+  position: sticky;
+  top: 0; /* Navbar stays below the logo */
+  z-index: 1000;
 }
 
-.navbar ul {
-  list-style: none;
-  display: flex;
-  justify-content: center; /* Center items */
-  padding: 0;
-  margin: 0;
-}
-
-.navbar ul li {
-  margin: 0 20px; /* Space between items */
-}
-
-.navbar ul li a {
-  color: #333;
+.navbar a {
+  color: white;
   text-decoration: none;
   font-size: 18px;
   font-weight: bold;
 }
 
-.navbar ul li a:hover {
-  color: #007BFF; /* Hover effect */
+.navbar a:hover {
+  color: #007BFF;
 }
 
-/* Add other styles as necessary */
+/* Style for centered text */
 .centered-text {
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 100vh; /* Full view height */
+  height: 50vh;
   text-align: center;
+  font-size: 24px;
 }

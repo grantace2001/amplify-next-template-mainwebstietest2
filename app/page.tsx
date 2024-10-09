@@ -13,7 +13,7 @@ const client = generateClient<Schema>();
 
 export default function App() {
   return (
-    <main style={{ paddingTop: '60px' }}>
+    <main>
       {/* Header for logo or title */}
       <header className="logo-banner">
         <h1>Website Title or Logo</h1> {/* You can replace this with an actual logo image */}
