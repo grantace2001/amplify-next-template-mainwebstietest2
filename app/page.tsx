@@ -16,7 +16,7 @@ export default function App() {
     <main style={{ paddingTop: '60px' }}>
       {/* Header for logo or title */}
       <header className="logo-banner">
-        <h1>Grace Assembly of God</h1>
+        <h1>Website Title or Logo</h1> {/* You can replace this with an actual logo image */}
       </header>
 
       {/* Navigation Bar */}

@@ -18,6 +18,13 @@ main {
   margin: 60px auto 0; /* Center content and add top margin for fixed navbar */
   padding: 20px;
 }
+.logo-banner {
+  text-align: center;
+  padding: 10px;
+  background-color: #f8f8f8; /* Optional */
+  border-bottom: 1px solid #ddd; /* Optional border */
+  font-size: 24px; /* Adjust as needed */
+}
 .navbar {
   display: flex;
   justify-content: space-around;
@@ -61,9 +68,4 @@ main {
   align-items: center;
   height: 100vh; /* Full view height */
   text-align: center;
-}
-.logo-banner {
-  text-align: center;
-  padding: 10px;
-  background-color: #f8f8f8; /* Optional for better visibility */
 }
