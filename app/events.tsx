@@ -1,5 +1,3 @@
-// pages/events.tsx
-
 export default function Events() {
     return (
       <main>
@@ -7,5 +5,6 @@ export default function Events() {
         <p>Details about upcoming events will be displayed here.</p>
       </main>
     );
-  }  
+  }
+  
   
