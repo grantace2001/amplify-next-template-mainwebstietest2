@@ -206,3 +206,14 @@ main {
 .navbar a:hover {
   color: #007BFF; /* Hover effect */
 }
+/* App.css */
+.container {
+  margin: 0 auto;
+  padding: 20px;
+  width: 100%;
+  max-width: 1200px;
+  text-align: left;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
