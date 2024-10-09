@@ -22,7 +22,7 @@ export default function App() {
       {/* Navigation Bar */}
       <nav className="navbar">
         <a href="#Home">Home</a>
-        <link href="#Events">Events</link>
+        <a href="#Events">Events</a> {/* Corrected link here */}
         <a href="#Groups">Groups</a>
         <a href="#Next Steps">Next Steps</a>
         <a href="#Kids/YTH">Kids/YTH</a>
