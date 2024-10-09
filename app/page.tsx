@@ -24,6 +24,11 @@ export default function App() {
         <a href="#services">Services</a>
         <a href="#contact">Contact</a>
     </nav>
+
+    {/* Header */}
+    <h1> Grace Assembly of God</h1>
+    <h2> Spring City, PA</h2>
+    {/* Add any other content for the landing page here */}
   </main>
 );
 }
