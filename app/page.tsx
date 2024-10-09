@@ -26,8 +26,8 @@ export default function App() {
     </nav>
 
     {/* Header */}
-    <h1 className="right-heading">Grace Assembly of God</h1>
-    <h2 className="right-heading">Spring City, PA</h2>
+    <h1> Grace Assembly of God</h1>
+    <h2> Spring City, PA</h2>
     {/* Add any other content for the landing page here */}
   </main>
 );
