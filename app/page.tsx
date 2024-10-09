@@ -18,10 +18,15 @@ export default function App() {
     <main style={{ paddingTop: '60px' }}>
       {/* Navigation Bar */}
       <nav className="navbar">
-        <a href="#home">Home</a>
-        <a href="#about">About</a>
-        <a href="#services">Services</a>
-        <a href="#contact">Contact</a>
+        <a href="#Home">Home</a>
+        <a href="#Events">Events</a>
+        <a href="#Groups">Groups</a>
+        <a href="#Next Steps">Next Steps</a>
+        <a href="#Kids/YTH">Kids/YTH</a>
+        <a href="#Learning Center">Learning Center</a>
+        <a href="#About">About</a>
+        <a href="#Resources">Resources</a>
+        <a href="#Give">Give</a>
       </nav>
       {/* Header */}
       <h1>Grace Assembly of God</h1>
