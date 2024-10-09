@@ -6,6 +6,7 @@ import type { Schema } from "@/amplify/data/resource";
 import outputs from "@/amplify_outputs.json";
 import "@aws-amplify/ui-react/styles.css";
 import "./../app/app.css";
+import Link from "next/link";
 
 Amplify.configure(outputs);
 
@@ -22,7 +23,7 @@ export default function App() {
       {/* Navigation Bar */}
       <nav className="navbar">
         <a href="#Home">Home</a>
-        <a href="#Events">Events</a> {/* Corrected link here */}
+        <Link href="/events">Events</Link> {/* Corrected link here */}
         <a href="#Groups">Groups</a>
         <a href="#Next Steps">Next Steps</a>
         <a href="#Kids/YTH">Kids/YTH</a>
