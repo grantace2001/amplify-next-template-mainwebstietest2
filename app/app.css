@@ -55,3 +55,10 @@ main {
 }
 
 /* Add other styles as necessary */
+.centered-text {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh; /* Full view height */
+  text-align: center;
+}

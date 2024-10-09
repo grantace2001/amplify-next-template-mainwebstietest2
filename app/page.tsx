@@ -26,7 +26,12 @@ export default function App() {
       {/* Header */}
       <h1>Grace Assembly of God</h1>
       <h2>Spring City, PA</h2>
+
       {/* Add any other content for the landing page here */}
+      {/* Centered Text */}
+  <div className="centered-text">
+    <p>JOIN US FOR CHURCH THIS SUNDAY!</p>
+  </div>
     </main>
   );
 }
