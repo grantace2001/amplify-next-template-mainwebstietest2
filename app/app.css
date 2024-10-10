@@ -24,12 +24,12 @@ main {
   padding: 20px;
   background: linear-gradient(
     to right, 
-    rgba(255, 0, 0, 0.8), /* Start with red and 80% opacity */
-    rgba(0, 0, 255, 0.8)  /* End with blue and 80% opacity */
+    rgba(217, 181, 134, 25.0), /* Start with red and 80% opacity */
+    rgba(224, 179, 104, 25.0)  /* End with blue and 80% opacity */
   );
-  border-bottom: 1px solid #ddd;
+  border-bottom: 1px solid #D9CB97;
   font-size: 24px;
-  border-radius: 15px; /* Adjust the radius as needed */
+  border-radius: 60px; /* Adjust the radius as needed */
 }
 
 /* Navbar styling */
