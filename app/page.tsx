@@ -7,7 +7,6 @@ import outputs from "@/amplify_outputs.json";
 import "@aws-amplify/ui-react/styles.css";
 import "./../app/app.css";
 import Link from "next/link";
-import ContactForm from './components/ContactForm'; // No change needed here
 
 
 Amplify.configure(outputs);
@@ -35,7 +34,21 @@ export default function App() {
         <p>JOIN US FOR CHURCH THIS SUNDAY!</p>
       </div>
 
-      <ContactForm />
+      <form
+  action="https://formspree.io/f/xpwzagjy"
+  method="POST"
+>
+  <label>
+    Your email:
+    <input type="email" name="email">
+  </label>
+  <label>
+    Your message:
+    <textarea name="message"></textarea>
+  </label>
+  <!-- your other form fields go here -->
+  <button type="submit">Send</button>
+</form>
 
     </main>
   );
