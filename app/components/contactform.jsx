@@ -1,8 +1,7 @@
-// app/ContactForm.js or app/components/ContactForm.jsx
 "use client";
 
 import { useState } from "react";
-import emailjs from "@emailjs/browser"; // Updated import
+import emailjs from "@emailjs/browser";
 
 export default function ContactForm() {
   const [formData, setFormData] = useState({
@@ -19,12 +18,11 @@ export default function ContactForm() {
   const handleSubmit = (e) => {
     e.preventDefault();
 
-    // Replace with your actual EmailJS service ID, template ID, and user ID
     emailjs
       .send("service_e3gjcek", "template_gnqyr8q", formData, "QiDSbK4d3M_FPzdgj")
       .then((response) => {
         console.log("Email sent successfully:", response);
-        setFormData({ name: "", email: "", message: "" });
+        setFormData({ name: "", email: "", message: "" }); // Clear the form
       })
       .catch((error) => {
         console.error("Error sending email:", error);

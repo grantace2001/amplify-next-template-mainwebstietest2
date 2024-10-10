@@ -7,6 +7,7 @@ import outputs from "@/amplify_outputs.json";
 import "@aws-amplify/ui-react/styles.css";
 import "./../app/app.css";
 import Link from "next/link";
+import ContactForm from './components/ContactForm'; // Make sure this is correct
 
 
 Amplify.configure(outputs);
@@ -33,6 +34,9 @@ export default function App() {
       <div className="centered-text">
         <p>JOIN US FOR CHURCH THIS SUNDAY!</p>
       </div>
+
+      <ContactForm />
+
     </main>
   );
 }
