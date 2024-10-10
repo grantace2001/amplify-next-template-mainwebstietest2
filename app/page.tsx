@@ -36,7 +36,7 @@ export default function App() {
       </div>
 
        {/* Place the ContactForm here */}
-       <ContactForm />
+       <ContactForm> Fill this Form out for us! We would love to get to know you! </ContactForm>
 
     </main>
   );
