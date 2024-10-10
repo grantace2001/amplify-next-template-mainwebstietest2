@@ -19,7 +19,12 @@ export default function ContactForm() {
     e.preventDefault();
 
     emailjs
-      .send("service_e3gjcek", "template_gnqyr8q", formData, "QiDSbK4d3M_FPzdgj")
+      .send(
+        process.env.NEXT_PUBLIC_EMAILJS_SERVICE_ID,
+        process.env.NEXT_PUBLIC_EMAILJS_TEMPLATE_ID,
+        formData,
+        process.env.NEXT_PUBLIC_EMAILJS_PUBLIC_KEY
+      )
       .then((response) => {
         console.log("Email sent successfully:", response);
         setFormData({ name: "", email: "", message: "" }); // Clear the form
