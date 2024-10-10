@@ -7,7 +7,6 @@ import outputs from "@/amplify_outputs.json";
 import "@aws-amplify/ui-react/styles.css";
 import "./../app/app.css";
 import Link from "next/link";
-import ContactForm from './components/ContactForm'; // Correct path
 
 
 Amplify.configure(outputs);
