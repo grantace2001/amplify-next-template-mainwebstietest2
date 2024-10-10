@@ -24,8 +24,8 @@ main {
   padding: 20px;
   background: linear-gradient(
     to right, 
-    rgba(217, 181, 134, 0.2), /* Start with red and 80% opacity */
-    rgba(224, 179, 104, 0.2)  /* End with blue and 80% opacity */
+    rgba(217, 181, 134, 0.6), /* Start with red and 80% opacity */
+    rgba(224, 179, 104, 0.6)  /* End with blue and 80% opacity */
   );
   border-bottom: 1px solid #D9CB97;
   font-size: 24px;
@@ -41,6 +41,7 @@ main {
   position: sticky;
   top: 0; /* Navbar stays below the logo */
   z-index: 1000;
+  border-radius: 10px; /* Adjust the radius as needed */
 }
 
 .navbar a {
