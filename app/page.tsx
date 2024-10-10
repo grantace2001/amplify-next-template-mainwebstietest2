@@ -6,7 +6,7 @@ import type { Schema } from "@/amplify/data/resource";
 import outputs from "@/amplify_outputs.json";
 import "@aws-amplify/ui-react/styles.css";
 import "./../app/app.css";
-import Link from "next/link"; // Ensure this import is present
+import Link from "next/link";
 
 Amplify.configure(outputs);
 
@@ -34,13 +34,11 @@ export default function App() {
       </div>
 
       <form action="mailto:grantace01@gmail.com" method="POST" enctype="text/plain">
-  <input type="text" name="name" placeholder="Your Name" required />
-  <input type="email" name="email" placeholder="Your Email" required />
-  <textarea name="message" placeholder="Your Message" required></textarea>
-  <button type="submit">Send</button>
+        <input type="text" name="name" placeholder="Your Name" required />
+        <input type="email" name="email" placeholder="Your Email" required />
+        <textarea name="message" placeholder="Your Message" required></textarea>
+        <button type="submit">Send</button>
       </form>
-
-
     </main>
   );
 }
