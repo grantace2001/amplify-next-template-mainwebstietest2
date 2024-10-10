@@ -1,3 +1,4 @@
+// app/components/ContactForm.jsx
 "use client";
 
 import { useState } from "react";
@@ -5,73 +6,66 @@ import { useState } from "react";
 export default function ContactForm() {
   const [formData, setFormData] = useState({
     email: "",
-    upload: null, // for file uploads
+    message: "",
   });
-  const [loading, setLoading] = useState(false);
-  const [success, setSuccess] = useState(false);
+  const [status, setStatus] = useState("");
 
   const handleChange = (e) => {
-    const { name, value, files } = e.target;
-    setFormData((prevData) => ({
-      ...prevData,
-      [name]: files ? files[0] : value, // handle file input
-    }));
+    const { name, value } = e.target;
+    setFormData((prevData) => ({ ...prevData, [name]: value }));
   };
 
-  const handleSubmit = async (e) => {
-    e.preventDefault();
-    setLoading(true);
-    setSuccess(false);
+  const handleSubmit = async (event) => {
+    event.preventDefault();
+    setStatus(""); // Clear previous status
 
-    const form = new FormData();
-    form.append("email", formData.email);
-    if (formData.upload) {
-      form.append("upload", formData.upload); // append the file if exists
-    }
+    const data = new FormData(event.target);
 
     try {
       const response = await fetch("https://formspree.io/f/xpwzagjy", {
         method: "POST",
-        body: form,
+        body: data,
+        headers: {
+          Accept: "application/json",
+        },
       });
 
       if (response.ok) {
-        setSuccess(true);
-        setFormData({ email: "", upload: null }); // Reset form data
+        setStatus("Thanks for your submission!");
+        setFormData({ email: "", message: "" }); // Clear the form
       } else {
-        console.error("Error sending form:", response.statusText);
+        const errorData = await response.json();
+        if (errorData.errors) {
+          setStatus(errorData.errors.map((error) => error.message).join(", "));
+        } else {
+          setStatus("Oops! There was a problem submitting your form.");
+        }
       }
     } catch (error) {
-      console.error("Error sending form:", error);
-    } finally {
-      setLoading(false);
+      setStatus("Oops! There was a problem submitting your form.");
     }
   };
 
   return (
-    <form onSubmit={handleSubmit}>
-      <label>
-        Your email:
-        <input
-          type="email"
-          name="email"
-          value={formData.email}
-          onChange={handleChange}
-          required
-        />
-      </label>
-      <label>
-        Your file:
-        <input
-          type="file"
-          name="upload"
-          onChange={handleChange}
-        />
-      </label>
-      <button type="submit" disabled={loading}>
-        {loading ? "Sending..." : "Send"}
-      </button>
-      {success && <p>Form submitted successfully!</p>}
+    <form id="my-form" onSubmit={handleSubmit}>
+      <label>Email:</label>
+      <input
+        type="email"
+        name="email"
+        value={formData.email}
+        onChange={handleChange}
+        required
+      />
+      <label>Message:</label>
+      <input
+        type="text"
+        name="message"
+        value={formData.message}
+        onChange={handleChange}
+        required
+      />
+      <button id="my-form-button" type="submit">Submit</button>
+      <p id="my-form-status">{status}</p>
     </form>
   );
 }
