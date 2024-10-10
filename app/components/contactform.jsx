@@ -21,7 +21,7 @@ export default function ContactForm() {
 
     // Replace with your actual EmailJS service ID, template ID, and user ID
     emailjs
-      .send("YOUR_SERVICE_ID", "YOUR_TEMPLATE_ID", formData, "YOUR_USER_ID")
+      .send("service_e3gjcek", "template_gnqyr8q", formData, "QiDSbK4d3M_FPzdgj")
       .then((response) => {
         console.log("Email sent successfully:", response);
         setFormData({ name: "", email: "", message: "" });
