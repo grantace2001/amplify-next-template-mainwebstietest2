@@ -34,10 +34,6 @@ export default function App() {
       <div className="centered-text">
         <p>JOIN US FOR CHURCH THIS SUNDAY!</p>
       </div>
-
-       {/* Place the ContactForm here */}
-       <ContactForm> Fill this Form out for us! We would love to get to know you! </ContactForm>
-
     </main>
   );
 }
