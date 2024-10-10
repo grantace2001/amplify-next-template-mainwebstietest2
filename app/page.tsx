@@ -32,13 +32,6 @@ export default function App() {
       <div className="centered-text">
         <p>JOIN US FOR CHURCH THIS SUNDAY!</p>
       </div>
-
-      <form action="mailto:grantace01@gmail.com" method="POST" enctype="text/plain">
-        <input type="text" name="name" placeholder="Your Name" required />
-        <input type="email" name="email" placeholder="Your Email" required />
-        <textarea name="message" placeholder="Your Message" required></textarea>
-        <button type="submit">Send</button>
-      </form>
     </main>
   );
 }
