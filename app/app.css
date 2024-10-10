@@ -22,9 +22,14 @@ main {
 .logo-banner {
   text-align: center;
   padding: 20px;
-  background-color: #f8f8f8;
+  background: linear-gradient(
+    to right, 
+    rgba(255, 0, 0, 0.8), /* Start with red and 80% opacity */
+    rgba(0, 0, 255, 0.8)  /* End with blue and 80% opacity */
+  );
   border-bottom: 1px solid #ddd;
   font-size: 24px;
+  border-radius: 15px; /* Adjust the radius as needed */
 }
 
 /* Navbar styling */
