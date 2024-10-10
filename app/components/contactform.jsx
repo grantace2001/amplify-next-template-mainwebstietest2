@@ -1,65 +1,77 @@
 "use client";
 
 import { useState } from "react";
-import emailjs from "@emailjs/browser";
 
 export default function ContactForm() {
   const [formData, setFormData] = useState({
-    name: "",
     email: "",
-    message: "",
+    upload: null, // for file uploads
   });
+  const [loading, setLoading] = useState(false);
+  const [success, setSuccess] = useState(false);
 
   const handleChange = (e) => {
-    const { name, value } = e.target;
-    setFormData((prevData) => ({ ...prevData, [name]: value }));
+    const { name, value, files } = e.target;
+    setFormData((prevData) => ({
+      ...prevData,
+      [name]: files ? files[0] : value, // handle file input
+    }));
   };
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
+    setLoading(true);
+    setSuccess(false);
 
-    emailjs
-      .send(
-        process.env.NEXT_PUBLIC_EMAILJS_SERVICE_ID,
-        process.env.NEXT_PUBLIC_EMAILJS_TEMPLATE_ID,
-        formData,
-        process.env.NEXT_PUBLIC_EMAILJS_PUBLIC_KEY
-      )
-      .then((response) => {
-        console.log("Email sent successfully:", response);
-        setFormData({ name: "", email: "", message: "" }); // Clear the form
-      })
-      .catch((error) => {
-        console.error("Error sending email:", error);
+    const form = new FormData();
+    form.append("email", formData.email);
+    if (formData.upload) {
+      form.append("upload", formData.upload); // append the file if exists
+    }
+
+    try {
+      const response = await fetch("https://formspree.io/f/xpwzagjy", {
+        method: "POST",
+        body: form,
       });
+
+      if (response.ok) {
+        setSuccess(true);
+        setFormData({ email: "", upload: null }); // Reset form data
+      } else {
+        console.error("Error sending form:", response.statusText);
+      }
+    } catch (error) {
+      console.error("Error sending form:", error);
+    } finally {
+      setLoading(false);
+    }
   };
 
   return (
     <form onSubmit={handleSubmit}>
-      <input
-        type="text"
-        name="name"
-        value={formData.name}
-        onChange={handleChange}
-        placeholder="Your Name"
-        required
-      />
-      <input
-        type="email"
-        name="email"
-        value={formData.email}
-        onChange={handleChange}
-        placeholder="Your Email"
-        required
-      />
-      <textarea
-        name="message"
-        value={formData.message}
-        onChange={handleChange}
-        placeholder="Your Message"
-        required
-      ></textarea>
-      <button type="submit">Send</button>
+      <label>
+        Your email:
+        <input
+          type="email"
+          name="email"
+          value={formData.email}
+          onChange={handleChange}
+          required
+        />
+      </label>
+      <label>
+        Your file:
+        <input
+          type="file"
+          name="upload"
+          onChange={handleChange}
+        />
+      </label>
+      <button type="submit" disabled={loading}>
+        {loading ? "Sending..." : "Send"}
+      </button>
+      {success && <p>Form submitted successfully!</p>}
     </form>
   );
 }
