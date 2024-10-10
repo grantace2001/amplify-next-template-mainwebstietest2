@@ -24,19 +24,19 @@ main {
   padding: 20px;
   background: linear-gradient(
     to right, 
-    rgba(217, 181, 134, 25.0), /* Start with red and 80% opacity */
-    rgba(224, 179, 104, 25.0)  /* End with blue and 80% opacity */
+    rgba(217, 181, 134, 0.2), /* Start with red and 80% opacity */
+    rgba(224, 179, 104, 0.2)  /* End with blue and 80% opacity */
   );
   border-bottom: 1px solid #D9CB97;
   font-size: 24px;
-  border-radius: 60px; /* Adjust the radius as needed */
+  border-radius: 25px; /* Adjust the radius as needed */
 }
 
 /* Navbar styling */
 .navbar {
   display: flex;
   justify-content: space-around;
-  background-color: #333;
+  background-color: #9c9865;
   padding: 10px;
   position: sticky;
   top: 0; /* Navbar stays below the logo */
@@ -48,10 +48,11 @@ main {
   text-decoration: none;
   font-size: 18px;
   font-weight: bold;
+  text-shadow: 2px 2px 4px rgba(139, 139, 139, 0.2);
 }
 
 .navbar a:hover {
-  color: #007BFF;
+  color: #000000;
 }
 
 /* Style for centered text */
